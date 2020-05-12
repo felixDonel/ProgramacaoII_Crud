@@ -92,18 +92,10 @@ public Boolean upAluno(Aluno aluno) {
         // -- se não tiver cache em memória
         
         // - modificar para consulta de validação
-        for (Aluno c : this.getAlunos()) {
-            if(c.getContrato().equals(aluno.getContrato())) {
-                
-                valid = false;
-                break;
-            }
-        }
+        
         
         if(valid) {
-            MainFrameService.Delete(aluno.getContrato());
-            MainFrameService.inserir(aluno);
-            //MainFrameService.update(aluno);
+            MainFrameService.update(aluno);
         }
         return valid;
     }

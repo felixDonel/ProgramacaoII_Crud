@@ -618,14 +618,7 @@ public class Tela extends javax.swing.JFrame {
              */
             // negação
             if (!Validations.isValidName(inNome) || 
-                !Validations.isValidContrato(inContrato)||
-                !Validations.isData(inNascimento)||
-                !Validations.isValidName(inRg)||
-                !Validations.isCpf(inCPF)||    
-                !Validations.isData(inValidade)||    
-                !Validations.isValidName(inCurso)||    
-                !Validations.isValidName(inTurno)||    
-                !Validations.isData(inMatricula)    ) {
+                !Validations.isValidName(inContrato)   ) {
                 JOptionPane.showMessageDialog(this, "Esta faltando preecher campo!");
             } else {
                 // Creating a new Aluno

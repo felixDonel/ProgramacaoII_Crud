@@ -62,22 +62,21 @@ public class MainFrameService {
             // Abrindo a conexão com o banco
             DataService.open();
             // Instanciando o objeto preparedStatement (pstmt)
-            PreparedStatement pstmt = DataService.conn.prepareStatement("UPDATE aluno SET Nome = ?,Contrato = ?,Ano = ?,Turno = ?,DataNasciemnto = ?,DataMatricula = ?,DataValidade = ?,RG = ?,CPF = ?,Curso = ?,Obs = ?,Genero = ? Where id = ?");
+            PreparedStatement pstmt = DataService.conn.prepareStatement("UPDATE aluno SET Nome = ?,Ano = ?,Turno = ?,DataNasciemnto = ?,DataMatricula = ?,DataValidade = ?,RG = ?,CPF = ?,Curso = ?,Obs = ?,Genero = ? Where Contrato = ?");
             // Setando o valor ao parâmetro 
             // aluno.setName("")
             pstmt.setString(1, aluno.getNome());
-            pstmt.setString(2, aluno.getContrato());
-            pstmt.setInt(3, aluno.getAno());
-            pstmt.setString(4, aluno.getTurno());
-            pstmt.setString(5, aluno.getNascimento());
-            pstmt.setString(6, aluno.getDataMatricula());
-            pstmt.setString(7, aluno.getDatavalidade());
-            pstmt.setString(8, aluno.getRG());
-            pstmt.setString(9, aluno.getCpf());
-            pstmt.setString(10, aluno.getCurso());
-            pstmt.setString(11, aluno.getObs());
-            pstmt.setString(12, aluno.getSexo());
-            pstmt.setInt(13, aluno.getid());
+            pstmt.setInt(2, aluno.getAno());
+            pstmt.setString(3, aluno.getTurno());
+            pstmt.setString(4, aluno.getNascimento());
+            pstmt.setString(5, aluno.getDataMatricula());
+            pstmt.setString(6, aluno.getDatavalidade());
+            pstmt.setString(7, aluno.getRG());
+            pstmt.setString(8, aluno.getCpf());
+            pstmt.setString(9, aluno.getCurso());
+            pstmt.setString(10, aluno.getObs());
+            pstmt.setString(11, aluno.getSexo());
+            pstmt.setString(12, aluno.getContrato());
             // Fechando a conexão com o banco
             pstmt.execute();
             DataService.close();
