@@ -558,7 +558,13 @@ public class Tela extends javax.swing.JFrame {
              */
             // negação
             if (!Validations.isValidName(inNome) || 
-                !Validations.isValidName(inContrato)) {
+                !Validations.isValidName(inCurso) ||
+                !Validations.isValidName(inTurno) ||
+                !Validations.isValidName(inContrato) ||
+                !Validations.isData(inValidade) ||
+                !Validations.isData(inMatricula) ||
+                !Validations.isData(inNascimento)||
+                !Validations.isCpf(inCPF)) {
                 JOptionPane.showMessageDialog(this, "Requisitos: Todos campos obrigatorios preenchidos, data no formato dd/mm/aaaa e Cpf no formato 000.000.000-00");
             } else {
                 // Creating a new Aluno
@@ -618,7 +624,12 @@ public class Tela extends javax.swing.JFrame {
              */
             // negação
             if (!Validations.isValidName(inNome) || 
-                !Validations.isValidName(inContrato)   ) {
+                !Validations.isValidName(inContrato) ||
+                !Validations.isData(inValidade) ||
+                !Validations.isData(inMatricula) ||
+                !Validations.isData(inNascimento)||
+                !Validations.isCpf(inCPF)
+                    ) {
                 JOptionPane.showMessageDialog(this, "Esta faltando preecher campo!");
             } else {
                 // Creating a new Aluno
